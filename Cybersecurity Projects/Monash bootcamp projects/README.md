@@ -6,10 +6,11 @@ There are also plaigurism scanners when you upload your submission.
 Project 1 is Creating a load balanced cloud application hosting a web-app set up as a blog.<br>
 <details>
   Description is as follows - "In the first project week, students will build, secure, and protect a cloud application that hosts their own cyber blog. This 
-  project     will result in tangible deliverables that demonstrate their knowledge of cloud, cloud security, networking, web development, cryptography, and 
+  project will result in tangible deliverables that demonstrate their knowledge of cloud, cloud security, networking, web development, cryptography, and 
   network security."
   <br>
-  In addition to this I learnt IaC using terraform to create the cloud app in azure.
+  In addition to this I learnt IaC using terraform to create the cloud app in azure. Within this I also edited the javascript that was hosting the webapp to add 
+  in the expandable see more section.
 </details>
 <br>
 Project 2 is a CTF style attack on a fictional company that covers a Web-app, a Linux server and a Windows server.<br>
