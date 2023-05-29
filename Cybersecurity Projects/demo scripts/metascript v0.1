@@ -8,7 +8,7 @@ process.expect('Final')
 print ("MSFVENOM SCRIPT COMPLETE. NAME=shell.exe")
 
 # Start Metasploit
-metasploit_process = pexpect.spawn('msfconsole')
+metasploit_process = pexpect.spawn('msfconsole -q')
 
 # Wait for Metasploit prompt
 metasploit_process.expect('msf6')
