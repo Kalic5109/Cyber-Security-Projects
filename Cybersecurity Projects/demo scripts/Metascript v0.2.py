@@ -14,7 +14,7 @@ print ("MSFVENOM SCRIPT COMPLETE. NAME=shell.exe")
 
 # Start Metasploit
 msf_script = pexpect.spawn('msfconsole', encoding='utf-8')
-fout = open('Metascript_logs.txt','wb')
+fout = open('Metascript_logs.txt','w', encoding='utf-8')
 msf_script.logfile = fout
 
 # Wait for Metasploit prompt
