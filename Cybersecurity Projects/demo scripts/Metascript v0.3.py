@@ -63,7 +63,7 @@ def run_resource(msf_script, resource_name):
         # Check if the meterpreter shell is presented
         msf_script.expect_exact('meterpreter >', timeout=10)
         msf_script.sendline('background')
-        msf_script.expect_exact('auxiliary')
+        msf_script.expect_exact('msf6', timeout=10)
         print("BACKGROUND SUCCESS")
         print(msf_script.after)
 
